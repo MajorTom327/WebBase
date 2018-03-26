@@ -9,3 +9,4 @@ echo "<body>" >> ./src/index.php
 echo "<h1>TEST BOILERPLATE</h1>" >> ./src/index.php
 echo "</body>" >> ./src/index.php
 echo "</html>" >> ./src/index.php
+mv .doxygen ./src/.doxygen
