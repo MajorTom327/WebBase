@@ -4,11 +4,14 @@ services:
     image: php:apache
     volumes:
     - "./src/:/var/www/html"
+    - "./config/:/etc/apache2/sites-available"
     links:
     - mysql
     ports:
     - "8080:80"
     privileged: true
+    environment:
+      - APACHE_DOCUMENT_ROOT /var/www/html/assets
 
   mysql:
     image: mysql:latest
